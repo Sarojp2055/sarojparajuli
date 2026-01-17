@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-100: var(--primary-100);
+  --color-primary-200: var(--primary-200);
+  --color-primary-300: var(--primary-300);
+  --color-primary-400: var(--primary-400);
+  --color-primary-500: var(--primary-500);
+  --color-primary-600: var(--primary-600);
+  --color-primary-700: var(--primary-700);
+  --color-primary-800: var(--primary-800);
+  --color-primary-900: var(--primary-900);
+
+  --color-accent-100: var(--accent-100);
+  --color-accent-500: var(--accent-500);
+  --color-accent-700: var(--accent-700);
+
+  --color-surface-50: var(--surface-50);
+  --color-surface-100: var(--surface-100);
+  --color-surface-200: var(--surface-200);
+  --color-surface-300: var(--surface-300);
+  --color-surface-800: var(--surface-800);
+  --color-surface-900: var(--surface-900);
+
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-inverse: var(--text-inverse);
+
+  --font-sans: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-mono: 'Fira Code', monospace;
+}
+
+/* Custom Variant for data-theme="dark" */
+@variant dark ([data-theme="dark"] &);
+
+:root {
+  /* Brand Colors - Statistician/Data Theme */
+  --primary-100: #E0F2F1;
+  --primary-200: #B2DFDB;
+  --primary-300: #80CBC4;
+  --primary-400: #4DB6AC;
+  --primary-500: #26A69A;
+  --primary-600: #009688;
+  --primary-700: #00897B;
+  --primary-800: #00796B;
+  --primary-900: #00695C;
+
+  --accent-100: #F3E5F5;
+  --accent-500: #9C27B0;
+  --accent-700: #7B1FA2;
+
+  /* Neutral Colors */
+  --surface-50: #ffffff;
+  --surface-100: #fafafa;
+  --surface-200: #f5f5f5;
+  --surface-300: #e0e0e0;
+  --surface-800: #424242;
+  --surface-900: #212121;
+
+  --text-primary: var(--surface-900);
+  --text-secondary: var(--surface-800);
+  --text-inverse: var(--surface-50);
+}
+
+[data-theme='dark'] {
+  --surface-50: #000000;
+  --surface-100: #0a0a0a;
+  --surface-200: #121212;
+  --surface-300: #222222;
+  --surface-800: #a3a3a3;
+  --surface-900: #ffffff;
+
+  --text-primary: #ededed;
+  --text-secondary: #a3a3a3;
+  --text-inverse: #000000;
+}
+
+@layer base {
+  body {
+    @apply bg-surface-50 text-text-primary transition-colors duration-700 ease-in-out min-h-screen;
+    position: relative;
+  }
+}
+
+/* Modern Statistical Background */
+.grid-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+
+  /* Primary Grid Lines */
+  background-image:
+    linear-gradient(var(--surface-300) 1px, transparent 1px),
+    linear-gradient(90deg, var(--surface-300) 1px, transparent 1px),
+    /* Graph Patterns */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath d='M0,80 Q25,80 50,50 T100,20' fill='none' stroke='currentColor' stroke-width='0.5' stroke-dasharray='1 4' opacity='0.2'/%3E%3Cpath d='M0,90 Q10,20 20,90 Q30,40 40,90 Q50,10 60,90 Q70,50 80,90 Q90,30 100,90' fill='none' stroke='currentColor' stroke-width='0.3' opacity='0.15'/%3E%3Cpath d='M5,95 L5,70 M15,95 L15,40 M25,95 L25,85 M35,95 L35,20 M45,95 L45,60 M55,95 L55,30 M65,95 L65,80 M75,95 L75,10 M85,95 L85,50 M95,95 L95,75' stroke='currentColor' stroke-width='2' opacity='0.1'/%3E%3C/svg%3E");
+
+  background-size: 40px 40px, 40px 40px, 100% 100%;
+  background-attachment: fixed;
+
+  /* Fade out towards edges */
+  mask-image: radial-gradient(circle at 50% 50%, black 20%, transparent 95%);
+  -webkit-mask-image: radial-gradient(circle at 50% 50%, black 20%, transparent 95%);
+
+  /* Lower opacity for light mode */
+  opacity: 0.15;
+  color: var(--primary-600);
+}
+
+[data-theme='dark'] .grid-bg {
+  /* Higher contrast for dark mode patterns */
+  opacity: 0.25;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath d='M0,80 Q25,80 50,50 T100,20' fill='none' stroke='white' stroke-width='0.5' stroke-dasharray='2 6' opacity='0.3'/%3E%3Cpath d='M0,90 Q10,20 20,90 Q30,40 40,90 Q50,10 60,90 Q70,50 80,90 Q90,30 100,90' fill='none' stroke='white' stroke-width='0.3' opacity='0.2'/%3E%3Cpath d='M5,95 L5,70 M15,95 L15,40 M25,95 L25,85 M35,95 L35,20 M45,95 L45,60 M55,95 L55,30 M65,95 L65,80 M75,95 L75,10 M85,95 L85,50 M95,95 L95,75' stroke='white' stroke-width='1.5' opacity='0.15'/%3E%3Cpath d='M20,20 A10,10 0 1,1 40,20 L30,40 Z' stroke='white' stroke-width='0.2' fill='none' opacity='0.1'/%3E%3C/svg%3E");
+  color: var(--primary-400);
+}
+
+/* Utilities */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-inline: 1rem;
+}
+
+.text-accent {
+  color: var(--accent-500);
+}

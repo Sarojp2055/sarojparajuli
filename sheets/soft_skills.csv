@@ -1,0 +1,6 @@
+id,order,visible,name,level,description
+ss-1,1,TRUE,Statistical Reasoning,95,Deep understanding of statistical theory and application
+ss-2,2,TRUE,Mathematical Proofs,85,Rigorous mathematical thinking and proof construction
+ss-3,3,TRUE,Critical Thinking,90,Analytical approach to problem-solving
+ss-4,4,TRUE,Problem Solving,90,Creative solutions to complex challenges
+ss-5,5,TRUE,Communication,80,Clear presentation of technical concepts

@@ -1,0 +1,4 @@
+id,order,visible,name,year,issuer,credentialUrl
+cert-1,1,TRUE,Google Data Analytics Professional Certificate,2023,Coursera/Google,
+cert-2,2,TRUE,TensorFlow Developer Certificate,2024,Google,
+cert-3,3,TRUE,AWS Cloud Practitioner,2024,Amazon,

@@ -1,0 +1,3 @@
+id,order,visible,role,company,period,description,logoUrl
+job-1,1,TRUE,Junior Data Scientist,Tech Solutions Inc.,2023 - Present,"Developing predictive models for customer churn and optimizing marketing spend. Built automated reporting dashboards using Python and Tableau.",
+job-2,2,TRUE,Statistical Analyst Intern,DataCorp,2022 - 2023,"Analysed large datasets to identify key trends and presented findings to stakeholders. Implemented A/B testing framework for product features.",

@@ -1,0 +1,5 @@
+id,order,visible,name,icon,url
+s1,1,TRUE,LinkedIn,💼,https://linkedin.com/in/saroj-parajuli
+s2,2,TRUE,GitHub,🐙,https://github.com/saroj-parajuli
+s3,3,TRUE,Scholar,📚,https://scholar.google.com/citations?user=saroj
+s4,4,TRUE,Twitter,🐦,https://twitter.com/saroj_stat

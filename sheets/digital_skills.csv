@@ -1,0 +1,7 @@
+id,order,visible,name,level,category,icon
+ds-1,1,TRUE,Python,90,Languages,🐍
+ds-2,2,TRUE,R,85,Languages,📊
+ds-3,3,TRUE,SQL,80,Database,🗄️
+ds-4,4,TRUE,Tableau,75,Visualization,📈
+ds-5,5,TRUE,TensorFlow/PyTorch,70,ML/AI,🤖
+ds-6,6,TRUE,Excel/Sheets,85,Tools,📑

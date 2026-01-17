@@ -1,0 +1,3 @@
+id,order,visible,degree,institution,year,details,logoUrl
+edu-1,1,TRUE,Master of Science in Statistics,University of Data Science,2023 - Present,"Focus on Bayesian Statistics, Time Series Analysis, and Deep Learning.",
+edu-2,2,TRUE,Bachelor of Science in Mathematics,National Technical Institute,2019 - 2023,Major in Applied Mathematics and minor in Computer Science.,

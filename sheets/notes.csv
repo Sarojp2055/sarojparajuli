@@ -1,0 +1,5 @@
+id,order,visible,title,content,category
+note-1,1,TRUE,Favorite Theorem,Bayes' Theorem - representing how we update our beliefs with new evidence.,Math
+note-2,2,TRUE,Current Read,'The Signal and the Noise' by Nate Silver.,Books
+note-3,3,TRUE,Did You Know?,I once optimized a sorting algorithm just for fun.,Fun Facts
+note-4,4,TRUE,Work Philosophy,Data tells stories - my job is to translate them into actionable insights.,Philosophy
